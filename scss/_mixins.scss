@@ -1,0 +1,38 @@
+@mixin btn(){
+   
+    border-radius: 20px;
+    border:none;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    background-image: linear-gradient( to right, $brand-light, $brand-dark );
+
+    &:hover{
+        background-image: linear-gradient( to left, $brand-light, $brand-dark );
+
+    }
+}
+
+@mixin card(){
+display: none;// para começar escondido.
+width: 550px;
+height: 416px;
+background-color:$black;
+border-radius: 5px;
+text-align: center;
+padding: 75px;
+box-sizing: border-box;
+
+@media (max-width:600px) {
+
+    width: 95%;
+    height: 390px;
+    padding: 65px 30px;
+
+    h1,h2{
+        font-size: 24px !important;
+    }
+    
+}
+
+}

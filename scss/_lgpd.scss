@@ -1,0 +1,40 @@
+.lgpd{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    height: 80px;
+    background-color: $black;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    
+
+    p{
+        max-width: 850px;
+        font-size: 14px;
+
+        a{
+            color: $brand-light;
+        }
+    }
+
+    button{
+        @include btn();
+        padding: 0 40px;
+    }
+
+    @media (max-width: 1100px) {
+
+        flex-direction: column; //para ficar um de baixo do outro.
+        row-gap: 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        
+    }
+   
+}
+
+
+
