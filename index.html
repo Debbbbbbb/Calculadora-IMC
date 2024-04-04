@@ -12,26 +12,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&family=Rajdhani:wght@300&family=Raleway:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <!-- Primary Meta Tags -->
-<title>Projeto IMC - Calcule o seu peso ideal</title>
-<meta name="title" content="Projeto IMC - Calcule o seu peso ideal" />
-<meta name="description" content="Projeto desenvolvida para você calcular o seu índice de massa corporal." />
+        <!-- Primary Meta Tags -->
+    <title>Projeto IMC - Calcule o seu peso ideal</title>
+    <meta name="title" content="Projeto IMC - Calcule o seu peso ideal" />
+    <meta name="description" content="Projeto desenvolvida para você calcular o seu índice de massa corporal." />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://debbbbbbb.github.io/Calculadora-imc/" />
-<meta property="og:title" content="Projeto IMC - Calcule o seu peso ideal" />
-<meta property="og:description" content="Projeto desenvolvida para você calcular o seu índice de massa corporal." />
-<meta property="og:image" content="https://dragiovannamarsala.com.br/wp-content/uploads/2023/01/imc.png" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://debbbbbbb.github.io/Calculadora-imc/" />
+    <meta property="og:title" content="Projeto IMC - Calcule o seu peso ideal" />
+    <meta property="og:description" content="Projeto desenvolvida para você calcular o seu índice de massa corporal." />
+    <meta property="og:image" content="https://dragiovannamarsala.com.br/wp-content/uploads/2023/01/imc.png" />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://debbbbbbb.github.io/Calculadora-imc/" />
-<meta property="twitter:title" content="Projeto IMC - Calcule o seu peso ideal" />
-<meta property="twitter:description" content="Projeto desenvolvida para você calcular o seu índice de massa corporal." />
-<meta property="twitter:image" content="https://dragiovannamarsala.com.br/wp-content/uploads/2023/01/imc.png" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://debbbbbbb.github.io/Calculadora-imc/" />
+    <meta property="twitter:title" content="Projeto IMC - Calcule o seu peso ideal" />
+    <meta property="twitter:description" content="Projeto desenvolvida para você calcular o seu índice de massa corporal." />
+    <meta property="twitter:image" content="https://dragiovannamarsala.com.br/wp-content/uploads/2023/01/imc.png" />
 
-<!-- Meta Tags Generated with https://metatags.io -->
+    <!-- Meta Tags Generated with https://metatags.io -->
 </head>
 <body>
     
@@ -63,6 +63,25 @@
         <button>Estou Ciente</button>
 
     </div>
+
+    <label for="altura">Altura (cm):</label>
+    <input type="text" id="altura" maxlength="4">
+
+    <script>
+    document.getElementById('altura').addEventListener('input', function (e) {
+    let altura = e.target.value;
+    // Remove todos os caracteres que não são dígitos
+    altura = altura.replace(/\D/g, '');
+    // Limita a altura a 3 dígitos (999 cm é uma altura razoável)
+    altura = altura.slice(0, 3);
+
+    // Adiciona um ponto (.) apenas se a altura tiver mais de dois dígitos
+    if (altura.length > 2) {
+        altura = altura.slice(0, -2) + '.' + altura.slice(-2);
+    }
+    e.target.value = altura;
+    });
+    </script>
 
     <script src="js/script.js"></script>
     <script src="js/lgpd.js"></script>
